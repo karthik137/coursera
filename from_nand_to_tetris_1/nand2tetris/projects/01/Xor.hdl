@@ -14,4 +14,21 @@ CHIP Xor {
 
     PARTS:
     // Put your code here:
+	//first find not(a) and not(b)
+	Nand(a=a, b=a, out=nota);
+	Nand(a=b, b=b, out=notb);
+	
+	//Now find a and not(b)
+	Nand(a=a, b=notb, out=anandnotb);
+	Nand(a=anandnotb, b=anandnotb, out=aandnotb);
+
+	//Now find not(a) and b
+	Nand(a=nota, b=b, out=notanandb);
+	Nand(a=notanandb, b=notanandb, out=notaandb);
+
+
+	//Now find aandnotb or noaandb
+	Nand(a=aandnotb, b=aandnotb, out=notaandnotb);
+	Nand(a=notaandb, b=notaandb, out=notnotaandb);
+	Nand(a=notaandnotb, b=notnotaandb, out=out);
 }
