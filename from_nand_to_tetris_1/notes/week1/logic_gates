@@ -1,0 +1,78 @@
+
+### Logic gates
+
+
+types:
+
+Elementary (Nand, And, Or, Not, .....)
+
+Composite  (Mux, Adder,......)
+
+
+### Design of gates (for gate architect)
+
+1)Always design the diagramatixal representation of the circuit
+2)Design a truth table
+
+
+
+### HDL
+
+HDL is known as hardware descriptive language.
+
+HDL describes the textual(programming?) representaion of chips.
+
+When we say gate it is nothing but a simple chip.
+
+HDL is a functional/ declarative language.
+
+The order of hdl statements is insignificant.
+
+before using a chip you must know its interface.
+
+
+HDL basic structure
+
+/** comments if any */
+
+CHIP Xor {
+
+	//Interface
+	IN	input,input2....;
+	OUT	output;
+
+	//Implementation
+	PARTS:
+	
+}
+
+
+
+
+Common HDL's:
+
+VHDL
+Verilog
+
+
+
+### Chip designing
+
+
+The players(first approximation):
+
+System architects
+Developers
+
+The system architect decides which chips are needed
+
+For each chip, the architect creates
+
+A chip API,
+A test script,
+A compare file
+
+
+
+
+

@@ -1,0 +1,10 @@
+//And gate implementation using nand gate
+
+CHIP And{
+	IN	a, b;
+	OUT	out;
+
+	PARTS:
+	Nand(in=a, in=b, out=anandb);
+	Nand(in=anandb, in=anandb, out=out);
+}

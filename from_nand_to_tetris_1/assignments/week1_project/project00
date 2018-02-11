@@ -1,0 +1,74 @@
+
+
+## Desgin not gate using nand gate
+
+Truth table for nand gate
+
+x	f
+0	1
+1	0
+
+/**
+*HDL Code
+*
+*/
+
+CHIP Not {
+	IN a;
+	OUT out;
+	
+	PARTS:
+	Nand(in=a,in=a,out=nota);
+}
+
+
+##Design Or gate using nand gate
+
+Truth table for nand gate
+
+truth table for or gate 
+
+x	y	f
+0	0	0
+0	1	1
+1	0	1
+1	1	1
+
+
+/**
+*HDL Code
+*/
+
+CHIP Or {
+	IN a,b;
+	OUT out;
+
+	PARTS:
+	Nand(in=a, in=a, out=nota);
+	Nand(in=b, in=b, out=notb);
+	Nand(in=nota, in=notb, out=aorb);
+}
+
+
+##Design and gate using nand gate
+
+truth table
+
+x	y	f
+0	0	0
+0	1	0
+1	0	0
+1	1	1
+
+/**
+*HDL code
+*
+*/
+
+CHIP And{
+	IN	a,b;
+	OUT	out;
+
+	Nand(in=a, in=b, out=anandb);
+	Nand(in=anandb, in=anandb, out=out);
+}

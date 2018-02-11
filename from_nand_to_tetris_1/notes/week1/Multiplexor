@@ -1,0 +1,57 @@
+##Multiplexor
+
+
+	a -----|
+	       |
+	b -----| MUX ------ out
+	       |
+	sel ---|
+
+
+if (sel == 0 )
+	out=a;
+else
+	out=b;
+
+
+A 2-way multiplexor enables selecting , and outputting one out of two 
+possible inputs.
+
+It is widely used in:
+
+-Digital design
+-communications networks
+
+
+
+##Demultiplexor
+
+	in ------| 	
+		 | ------a
+	sel------| ------b
+		 |
+
+if(sel==0)
+	{a,b}={in,0};
+else
+	{a,b}={0,in};
+
+Acts like the inverse of a multiplexor
+
+Distributes the single input value into two possible destinations
+
+
+
+
+
+How communication system works? -_-
+
+   ....1011
+-------------------|				   	|  ..1011
+	           |         ......01101101	   	|----------->
+                   | [Mux] ----------------------> DMux	|  ..0110
+   ....0110        |				   	|----------->
+-------------------|					|
+
+	(Source)					(destination)
+

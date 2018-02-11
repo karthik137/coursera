@@ -1,0 +1,11 @@
+//Or gate implementation using nand gate
+
+CHIP Or{
+	IN	a,b;
+	OUT	out;
+
+	PARTS:
+	Nand(in=a, in=a, out=nota);
+	Nand(in=b, in=b, out=notb);
+	Nand(in=nota, in=notb, out=out);
+}

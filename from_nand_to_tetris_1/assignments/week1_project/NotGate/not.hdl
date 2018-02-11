@@ -1,0 +1,9 @@
+//Not gate implementation using Nand gate
+
+CHIP Not{
+	IN 	a;
+	OUT	out;
+
+	PARTS:
+	Nand(in=a, in=a, out=out);
+}
