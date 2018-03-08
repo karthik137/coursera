@@ -1,0 +1,33 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/01/And16.hdl
+
+/**
+ * 16-bit Bus:
+ * 
+ */
+
+CHIP BusNot16 {
+    IN	input;
+    OUT out[16];
+
+    PARTS:
+    // Put your code here:
+	Not(in=input, out=out[0]);
+	Not(in=input, out=out[1]);
+	Not(in=input, out=out[2]);
+	Not(in=input, out=out[3]);
+	Not(in=input, out=out[4]);
+	Not(in=input, out=out[5]);
+	Not(in=input, out=out[6]);
+	Not(in=input, out=out[7]);
+	Not(in=input, out=out[8]);
+	Not(in=input, out=out[9]);
+	Not(in=input, out=out[10]);
+	Not(in=input, out=out[11]);
+	Not(in=input, out=out[12]);
+	Not(in=input, out=out[13]);
+	Not(in=input, out=out[14]);
+	Not(in=input, out=out[15]);
+}
